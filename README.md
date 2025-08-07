@@ -18,8 +18,11 @@
 
 ## Detailed Notes
 
-### Recursion  
-Pure recursion only—no `while` or `for` loops. Tail-call optimization may be added later.
+### Recursion and Tail-Call Optimization  
+- All iteration is via recursion; there are **no** `while` or `for` loops.  
+- **Tail-call optimization** ensures that calls in tail position do not consume additional stack space, allowing SCM-style recursive algorithms to run in constant space.
+
+---
 
 ---
 
@@ -54,7 +57,7 @@ result = (add 3 4)
 ```
 
 ### Side Note
-- Leaving comments is done in `` "" Comment here ""``
+- Leaving comments is done in ``""Comment here""``
 
 ### Example Code
 ```cpp
