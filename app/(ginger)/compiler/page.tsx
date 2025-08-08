@@ -47,7 +47,7 @@ export default function CompilerPage() {
   }
 
   return (
-    <section className="bg-black">
+    <section className="bg-transparent">
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">GingerLang Compiler</h1>
@@ -78,7 +78,8 @@ export default function CompilerPage() {
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 spellCheck={false}
-                className="min-h-[360px] font-mono text-sm"
+                className="min-h-[360px] font-mono text-sm bg-[var(--card)] text-[var(--fg)] placeholder:text-[color:var(--muted)]"
+                style={{ borderColor: "color-mix(in oklab, var(--fg) 14%, transparent)" }}
                 aria-label="GingerLang source code"
               />
               <p className="text-xs text-neutral-500">
@@ -90,7 +91,10 @@ export default function CompilerPage() {
               <div className="flex items-center gap-2">
                 <span className="font-medium">Output</span>
               </div>
-              <pre className="min-h-[360px] rounded-md border bg-zinc-50 p-3 text-sm overflow-auto">
+              <pre
+                className="min-h-[360px] rounded-md border p-3 text-sm overflow-auto bg-[var(--card)] text-[var(--fg)]"
+                style={{ borderColor: "color-mix(in oklab, var(--fg) 14%, transparent)" }}
+              >
                 <code>{output || "• Output will appear here."}</code>
               </pre>
               <div className="text-xs text-neutral-500">
