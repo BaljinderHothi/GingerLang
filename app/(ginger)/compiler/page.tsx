@@ -47,7 +47,7 @@ export default function CompilerPage() {
   }
 
   return (
-    <section className="bg-white">
+    <section className="bg-black">
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">GingerLang Compiler</h1>
